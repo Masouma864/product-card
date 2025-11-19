@@ -6,7 +6,7 @@ class DetailsPage extends StatelessWidget {
   final String description;
   final String image;
 
-  DetailsPage({
+  const DetailsPage({super.key, 
     required this.title,
     required this.price,
     required this.description,
@@ -43,7 +43,7 @@ class DetailsPage extends StatelessWidget {
                 ),
                 SizedBox(height: 10),
                 Text(
-                  "\$${price}",
+                  "\$$price",
                   style: TextStyle(fontSize: 22, color: Colors.black),
                 ),
                 SizedBox(height: 20),

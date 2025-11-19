@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class ProductFormPage extends StatefulWidget {
+  const ProductFormPage({super.key});
+
   @override
   _ProductFormPageState createState() => _ProductFormPageState();
 }
@@ -28,7 +30,8 @@ class _ProductFormPageState extends State<ProductFormPage> {
                   border: OutlineInputBorder(),
                 ),
                 validator: (value) {
-                  if (value == null || value.isEmpty) return "Enter product name";
+                  if (value == null || value.isEmpty)
+                    return "Enter product name";
                   return null;
                 },
                 onSaved: (value) => productName = value!,
@@ -42,7 +45,8 @@ class _ProductFormPageState extends State<ProductFormPage> {
                 keyboardType: TextInputType.number,
                 validator: (value) {
                   if (value == null || value.isEmpty) return "Enter price";
-                  if (double.tryParse(value) == null) return "Price must be a number";
+                  if (double.tryParse(value) == null)
+                    return "Price must be a number";
                   return null;
                 },
                 onSaved: (value) => productPrice = double.parse(value!),
@@ -55,7 +59,8 @@ class _ProductFormPageState extends State<ProductFormPage> {
                 ),
                 maxLines: 3,
                 validator: (value) {
-                  if (value == null || value.isEmpty) return "Enter description";
+                  if (value == null || value.isEmpty)
+                    return "Enter description";
                   return null;
                 },
                 onSaved: (value) => productDescription = value!,
@@ -77,7 +82,9 @@ class _ProductFormPageState extends State<ProductFormPage> {
                       _formKey.currentState!.save();
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(
-                          content: Text("Product $productName added successfully!"),
+                          content: Text(
+                            "Product $productName added successfully!",
+                          ),
                         ),
                       );
                     }

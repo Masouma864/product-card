@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "Laptop",
+    "description": "A high performance laptop for work and gaming.",
+    "price": 999.99,
+    "image": "assets/images/laptop.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Smartphone",
+    "description": "A smartphone with excellent camera and battery life.",
+    "price": 499.99,
+    "image": "assets/images/smartphone.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Headphones",
+    "description": "Noise-cancelling over-ear headphones.",
+    "price": 199.99,
+    "image": "assets/images/headphone.jpg"
+  }
+]
